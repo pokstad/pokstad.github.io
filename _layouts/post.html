@@ -42,14 +42,16 @@
             {{ content }}
         <div class="single-footer">
             <div class="social clearfix">
+				<!--
                 <a class="btn btn-writer btn-like" href="#"><i class="entypo-heart"></i>Like</a>
                 <img src="/img/profile-2.jpg" class="liked-this-icon" alt="user-image">
                 <img src="/img/profile-3.jpg" class="liked-this-icon" alt="user-image">
                 <img src="/img/profile-5.png" class="liked-this-icon" alt="user-image">
-                <a class="social-icon" href="#">
+					-->
+                <a class="social-icon" href="https://www.twitter.com/pokstad">
                     <i class="entypo-twitter"></i>
                 </a>
-                <a class="social-icon" href="#">
+                <a class="social-icon" href="https://www.facebook.com/pokstad">
                     <i class="entypo-facebook-squared"></i>
                 </a>
             </div>
@@ -61,6 +63,7 @@
                     <li><a href="#">Adventures</a></li>
                 </ul>
             </div>
+			<div id="disqus_thread"></div>
         </div>
         </div><!-- main-content/col -->
         </div> <!--/row -->
@@ -70,5 +73,15 @@
         <script src="/js/vendor/jquery.jpanelmenu.min.js"></script>
         <script src="/js/vendor/bootstrap.min.js"></script>
         <script src="/js/main.js"></script>
+		<script type="text/javascript">
+		    /* * * CONFIGURATION VARIABLES: THIS CODE IS ONLY AN EXAMPLE * * */
+		    var disqus_shortname = 'pokstad'; // Required - Replace example with your forum shortname
+		    /* * * DON'T EDIT BELOW THIS LINE * * */
+		    (function() {
+		        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		    })();
+		</script>
     </body>
 </html>
