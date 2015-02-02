@@ -1,3 +1,7 @@
+---
+layout: home
+title: Blogging Like a Hacker
+---
 <!DOCTYPE html>
 <html class="no-js">
     <head>
@@ -49,10 +53,8 @@
 
                 <div class="site-info">
                     <div class="primary-info">
-                    <h1>Writer</h1>
-                        <p>A minimal blogging theme to put your content on show. <a href="post.html">Look at the features.</a> </p>
-
-                        <p>Content is king</p>
+                        <h1>Paul Okstad</h1>
+                        <p>Long Beach, CA</p>
                     </div>
                     <div class="secondary-info">
 
@@ -70,6 +72,26 @@
                 </div>
 
                 <div class="home-page-posts animated fadeIn ">
+                {% for post in site.posts %}
+                    <div class="post">
+                        <section>
+                            <div class="post-preview col-xs-10  no-gutter">
+
+                            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                            {{ post.excerpt }}
+
+                            <p class="meta">
+                                <a class="" href="category.html">James Reddy</a> in <a class="" href="category.html">Storytime</a> <i class="link-spacer"></i> <i class="entypo-bookmark"></i> 23 minute read
+                            </p>
+                            </div>
+
+                            <div class=" col-xs-2  no-gutter">
+                                <img src="img/profile-1.jpg" class="user-icon user-1" alt="user-image">
+                            </div>
+
+                        </section>
+                    </div>
+                {% endfor %}
                 <div class="post">
                     <section>
                         <div class="post-preview col-xs-10  no-gutter">
