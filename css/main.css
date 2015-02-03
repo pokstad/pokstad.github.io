@@ -42,7 +42,7 @@ p {
 /* line 35, ../sass/_type.sass */
 a {
   text-decoration: none;
-  color: white;
+  /*color: white;*/
   border-bottom: solid 1px #fafafa;
 }
 /* line 40, ../sass/_type.sass */
