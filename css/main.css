@@ -1220,7 +1220,7 @@ ol li {
 
 /* line 67, ../sass/partials/_sidebar.sass */
 .sidebar-fav {
-  background: url(../img/background2.jpg) no-repeat center center;
+  background: url(/downloads/cove.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
