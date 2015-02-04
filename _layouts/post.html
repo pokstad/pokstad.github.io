@@ -9,6 +9,19 @@
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/main.css">
         <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <style type="text/css">
+            .custom-hero-image {
+              {% if post.hero_image %}
+              background: url({{ hero_image }}) center center no-repeat;
+              {% else %}
+              background: url(/downloads/tobylick.jpg) center center no-repeat;
+              {% endif %}
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+            }
+        </style>
     </head>
     <body>
     <span class="menu-trigger writer-icon animated fadeInDown">
@@ -16,7 +29,7 @@
         <span class="bar"></span>
         <span class="bar"></span>
     </span>
-    <div class="hero-image hero-a-great-story" style="">
+    <div class="hero-image custom-hero-image" style="">
         <!-- if the user has javascript disabled they can go fuck themselves -->
         <noscript>
             <h1>TURN ON JAVASCRIPT YOU WEIRDO</h1>
