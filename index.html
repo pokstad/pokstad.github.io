@@ -73,10 +73,10 @@ title: Blogging Like a Hacker
                             <div class="post-preview col-xs-10  no-gutter">
 
                             <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                            {{ post.excerpt }}
+                            {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
 
                             <p class="meta">
-                                <a class="" href="category.html">Paul Okstad</a> in <a class="" href="category.html">{{ post.category }}</a> <i class="link-spacer"></i> <i class="entypo-bookmark"></i> {{ post.readingTime }} minute read
+                                {{ post.date | date: '%B %d, %Y' }} <a class="" href="category.html">Paul Okstad</a> in <a class="" href="category.html">{{ post.category }}</a> <i class="link-spacer"></i> <i class="entypo-bookmark"></i> {{ post.readingTime }} minute read
                             </p>
                             </div>
 
