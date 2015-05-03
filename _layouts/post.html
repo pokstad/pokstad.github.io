@@ -11,8 +11,8 @@
         <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <style type="text/css">
             .custom-hero-image {
-              {% if post.hero_image %}
-              background: url({{ hero_image }}) center center no-repeat;
+              {% if page.hero_image %}
+              background: url({{ page.hero_image }}) center center no-repeat;
               {% else %}
               background: url(/downloads/tobylick.jpg) center center no-repeat;
               {% endif %}
