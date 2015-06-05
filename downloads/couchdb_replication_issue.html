@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+</head>
+    <h1>CouchDB Stress Test</h1>
+    <p>See the original article at pokstad.com for further background information:</p>
+    <ol>
+        <li><a href="https://dl.bintray.com/apache/couchdb/mac/1.6.1/Apache-CouchDB-1.6.1.zip">Install and run CouchDB 1.6.1 for OS X Yosemite 10.10</a></li>
+        <li>Configure your admin account in futon</li>
+        <li>
+            <p>Enter your admin credentials:</p>
+            <input id="admin_username" type="text" placeholder="Admin username"/><br/>
+            <input id="admin_password" type="password" placeholder="Admin password" /><br/>
+        </li>
+        <li>Open terminal and use this command to determine the process ID for CouchDB (it will be the first number on the left): <pre>ps | grep beam.smp</pre></li>
+        <li><p><a href="https://gist.github.com/pokstad/5ba229756076d8e08083#file-trackcpu-sh">Download this shell script.</a> Run it with this command (replace "PID" with the number found in the previous step):<pre>trackcpu.sh PID results</pre></p>
+            <p>Alternatively, you can use the top command to watch the CPU performance in real time: <pre>top -pid PID</pre></p></li>
+        <li>Let the CPU tracker run for about a minute so that it baselines your CouchDB performance under zero load.</li>
+        <li id="startTime">
+            After one minute, start the experiment:
+            <button onClick="startExperiment()">Start Experiment</button>
+        </li>
+        <li id="endTime">
+            Let the experiment run as long as possible. Ideally, 5-10 minutes. When you are ready, end the experiment:
+            <button onClick="cleanUpExperiment()">Clean Up Experiment</button>
+        </li>
+        <li>Analyze the data recorded in the current directory in the file results.txt</li>
+    </ol>
+    <div>
+        <ul id="db_status">
+        </ul>
+    </div>
+<body>
+    <script src="./jquery-2.1.3.min.js"></script>
+    <script src="./jquery.couch.js"></script>
+    <script type="text/javascript">
+        var databases = [];
+        var replications = [];
+        var db_count = 2000;
+        var global_db = "test_global";
+        var replicator_db = "_replicator";
+        
+        $.couch.urlPrefix = "http://localhost:5984"
+        for (var x = 0; x < db_count; x++) {
+            databases.push("testdb_"+x);
+        }
+        
+        function createDB(db_name, index, db_list) {
+            setTimeout(function() {
+                $("#db_status").append('<li id="'+db_name+'">'+db_name+' attempting creation</li>');
+                $.couch.db(db_name).create({
+                    success:function(resp) {
+                        $("#"+db_name).html(db_name+" has been created");
+                        if (db_list) {
+                            // if not in the array, it is the lone global DB
+                            createContinuousPushReplication(db_name, global_db);
+                        }
+                    },
+                    error:function(resp) {
+                        $("#"+db_name).html(db_name+" creation error");
+                    }
+                });
+            }, 0);
+        }
+        
+        function createContinuousPushReplication(source_db, target_db) {
+            setTimeout(function() {
+                var replDoc = {
+                    _id:source_db+":"+target_db,
+                    source:source_db,
+                    target:target_db,
+                    userCtx:{
+                        name:$("#admin_username").val(),
+                        roles:["admin"]
+                    },
+                    continuous:true
+                };
+                $.couch.db(replicator_db).saveDoc(replDoc, {
+                    success:function(resp) {
+                        $("#"+source_db).html(source_db+" replication created to "+target_db);
+                        replDoc._rev = resp.rev;
+                    },
+                    error:function(resp) {
+                        $("#"+source_db).html(source_db+" replication error");
+                    }
+                });
+                replications.push(replDoc);
+            }, 0);
+        }
+        
+        function deleteDB(db_name) {
+            setTimeout(function() {
+                $("#"+db_name).html(db_name+" attempting deletion");
+                $.couch.db(db_name).drop({
+                    success:function(resp) {
+                        $("#"+db_name).html(db_name+" has been deleted");
+                    },
+                    error:function(resp) {
+                        $("#"+db_name).html(db_name+" unable to delete");
+                    }
+                });
+            }, 0);
+        }
+        
+        function startExperiment() {
+            $("#startTime").append('<p>Start time: '+new Date().toLocaleTimeString()+'</p>');
+            $.couch.login({
+                name:$("#admin_username").val(),
+                password:$("#admin_password").val(),
+                success:function(resp){
+                    createDB(global_db, 0, null);
+                    databases.map(createDB);
+                },
+                error:function(resp) {
+                    console.log("Error: "+JSON.stringify(resp));
+                }
+            })
+        }
+        
+        function deleteReplication(replDoc, index, repl_list) {
+            setTimeout(function() {
+                $.couch.db(replicator_db).openDoc(replDoc._id, {
+                    success:function(doc) {
+                        $.couch.db(replicator_db).removeDoc(doc, {
+                            success:function(resp) {
+                                deleteDB(doc.source);
+                            },
+                            error:function(resp) {
+                                console.log("Replication delete failed: "+doc._id+" "+JSON.stringify(resp));
+                            }
+                        });
+                    },
+                    error:function(resp){
+                        console.log("Replication delete failed: "+JSON.stringify(resp));
+                    }
+                });
+            }, 0);
+        }
+        
+        function createDummyData(db_name, quantity) {
+            setTimeout(function() {
+                $.couch.db(db_name).saveDoc({},{
+                    success:function(resp){
+                        
+                    },
+                    error:function(resp){
+                        console.log("Error: "+JSON.stringify(resp));
+                    }
+                });
+            }, 0);
+        }
+        
+        function cleanUpExperiment() {
+            $("#endTime").append('<p>End time: '+new Date().toLocaleTimeString()+'</p>');
+            replications.map(deleteReplication);
+        }
+    </script>
+</body>
