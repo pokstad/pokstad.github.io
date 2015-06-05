@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Implementing a reverse proxy in Golang on Google App Engine
-hero_image: /downloads/gopher_on_couch.jpg
+hero_image: /downloads/golang-gae-couch.jpg
 readingTime: 15
 ---
 
