@@ -5,7 +5,7 @@ hero_image: /downloads/golang-gae-couch.jpg
 readingTime: 15
 ---
 
-Google runs an interesting PaaS (Platform as a Service) called App Engine. It allows you to write code in one of four language/environments: PHP, Python, Java, and *Go*. Go is current a beta offering but already offers the same features as the other three.
+Google runs an interesting PaaS (Platform as a Service) called App Engine. It allows you to write code in one of four language/environments: PHP, Python, Java, and *Go*. Go is currently a beta offering but already offers the same features as the other three.
 
 Some of the huge advantages of App Engine include:
 
@@ -157,7 +157,7 @@ Now we can test it out in an app engine project:
 
 ## The Cost ##
 
-So here's the problems with this solution: App Engine charges you extra for using urlfetch, even if the request never leaves their network (e.g. Compute Engine VM's).
+So here's the problem with this solution: App Engine charges you extra for using urlfetch, even if the request never leaves their network (e.g. Compute Engine VM's).
 
 At the time of writing, Google permits 657,000 urlfetch API calls for their free tier, and 172,800,000 API calls for their billed accounts. Bandwidth used from urlfetch counts toward your general [App Engine bandwidth quotas/billing](https://cloud.google.com/appengine/docs/quotas#UrlFetch).
 
