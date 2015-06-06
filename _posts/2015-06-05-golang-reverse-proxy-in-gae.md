@@ -150,7 +150,7 @@ Now we can test it out in an app engine project:
         // create a reverse proxy to our couch server
         proxy_url, _ := url.Parse("http://your_couchdb_server_hostname:5984/")
         reverse_proxy := NewSingleHostReverseProxy(proxy_url)
-        http.Handle("/",
+        http.Handle("/db/",
                     http.StripPrefix("/db/",
                     reverse_proxy))
     }
