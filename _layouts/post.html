@@ -7,81 +7,117 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
         <link rel="stylesheet" href="/css/main.css">
-        <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <style type="text/css">
-            .custom-hero-image {
-              {% if page.hero_image %}
-              background: url({{ page.hero_image }}) center center no-repeat;
-              {% else %}
-              background: url(/downloads/tobylick.jpg) center center no-repeat;
-              {% endif %}
-              -webkit-background-size: cover;
-              -moz-background-size: cover;
-              -o-background-size: cover;
-              background-size: cover;
-            }
-            .nothing {}
-        </style>
+
+        <!--[if lt IE 9]>
+            <script src="/js/vendor/html5shiv.min.js"></script>
+        <![endif]-->
+
+        <script src="/js/vendor/modernizr.custom.32229-2.8-respondjs-1-4-2.js"></script>
     </head>
     <body>
-    <span class="menu-trigger writer-icon animated fadeInDown">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </span>
-    <div class="hero-image custom-hero-image" style="">
-        <!-- if the user has javascript disabled they can go fuck themselves -->
-        <noscript>
-            <h1>TURN ON JAVASCRIPT YOU WEIRDO</h1>
-        </noscript>
-        <!-- end no script -->
-    </div>
-    <div class="container">
-        <div class="row">
-        <div id="menu">
-            <ul>
-                <li><i class="entypo-home"></i><a href="/index.html">Home</a></li>
-                <li><i class="entypo-user"></i><a href="">Paul Okstad</a></li>
-                <li><i class="entypo-star"></i><a href="/favorites.html">Favorites</a></li>
-                <li><i class="entypo-chart-area"></i><a href="/dashboard.html">Stats</a></li>
-            </ul>
-        </div>
-        <div class="col-xs-12 main-content single-content">
-            <p class="meta">
-                <a class="" href="category.html">Paul Okstad</a> in <a class="" href="category.html">{{ page.category }}</a> <i class="link-spacer"></i> <i class="entypo-bookmark"></i> {{ page.readingTime }} minute read
-            </p>
-            <h1>{{ page.title }}</h1>
-			<hr/>
-            {{ content }}
-        <div class="single-footer">
-            <div class="social clearfix">
-				<!--
-                <a class="btn btn-writer btn-like" href="#"><i class="entypo-heart"></i>Like</a>
-                <img src="/img/profile-2.jpg" class="liked-this-icon" alt="user-image">
-                <img src="/img/profile-3.jpg" class="liked-this-icon" alt="user-image">
-                <img src="/img/profile-5.png" class="liked-this-icon" alt="user-image">
-					-->
-                <a class="social-icon" href="https://www.twitter.com/pokstad">
-                    <i class="entypo-twitter"></i>
-                </a>
-                <a class="social-icon" href="https://www.facebook.com/pokstad">
-                    <i class="entypo-facebook-squared"></i>
-                </a>
-            </div>
-            <div class="category-list">
-                <p>Also found in</p>
+        <header class="hero-image" role="banner" style="background-image: url({% if page.hero_image %}{{ page.hero_image }}{% else %}/downloads/tobylick.jpg{% endif %});">
+            <span class="menu-trigger animated fadeInDown">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <!-- if the user has javascript disabled they can still use the menu -->
+            <noscript>
+                <div class="no-js-menu">
+                    <ul>
+                        <li><i class="fa fa-home"></i><a href="/index.html">Home</a></li>
+                        <li><i class="fa fa-user"></i><a href="/author.html">Paul Okstad</a></li>
+                        <li><i class="fa fa-star"></i><a href="/favorites.html">Favorites</a></li>
+                        <li><i class="fa fa-twitter"></i><a class="social-icon" href="https://www.twitter.com/pokstad">Twitter</a></li>
+                        <li><i class="fa fa-facebook-official"></i><a class="social-icon" href="https://www.facebook.com/pokstad">Facebook</a></li>
+                        <li><i class="fa fa-paper-plane"></i><a href="mailto:pokstad@icloud.com">Email</a></li>
+                    </ul>
+                </div>
+            </noscript>
+            <!-- end no script -->
+            
+            <div id="menu-target">
                 <ul>
-                    <li><a href="#">Stories</a></li>
-                    <li><a href="#">Life</a></li>
-                    <li><a href="#">Adventures</a></li>
+                        <li><i class="fa fa-home"></i><a href="/index.html">Home</a></li>
+                        <li><i class="fa fa-user"></i><a href="/author.html">Paul Okstad</a></li>
+                        <li><i class="fa fa-star"></i><a href="/favorites.html">Favorites</a></li>
+                        <li><i class="fa fa-twitter"></i><a class="social-icon" href="https://www.twitter.com/pokstad">Twitter</a></li>
+                        <li><i class="fa fa-facebook-official"></i><a class="social-icon" href="https://www.facebook.com/pokstad">Facebook</a></li>
+                        <li><i class="fa fa-paper-plane"></i><a href="mailto:pokstad@icloud.com">Email</a></li>
                 </ul>
             </div>
-			<div id="disqus_thread"></div>
-        </div>
-        </div><!-- main-content/col -->
-        </div> <!--/row -->
-    </div> <!-- /container -->
+        </header>
+        <main class="container">
+            <div class="row">
+                <div class="col-xs-12 single-content">
+                    <p class="meta">
+                        {% assign post = page %}
+                        <a class="" href="/index.html">Paul Okstad</a> wrote on {{ post.date | date: '%B %d, %Y' }} <i class="link-spacer"></i> <i class="entypo-bookmark"></i> {{ page.readingTime }} minute read<br/>
+                        
+                    </p>
+                    <h1>{{ page.title }}</h1>
+                    <p class="meta">
+                        {% if post.tags.size > 0 %}
+                            Tagged in
+                            {% for post_tag in post.tags %}
+                                {% for data_tag in site.data.tags %}
+                                    {% if data_tag.slug == post_tag %}
+                                        {% assign tag = data_tag %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% if tag %}
+                                    <a href="/blog/tag/{{ tag.slug }}/">{{ tag.name }}</a>,
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </p>
+        			<hr/>
+                    {{ content }}
+                </div>
+            </div>
+        </main>
+        <footer class="single">
+            <div class="container">
+                <div class="row">
+                    <div id="disqus_thread"></div>
+                </div><!-- div.row-->
+            </div><!-- div.container-->
+            <div class="row read-another-section">
+                <a href="post.html"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+                    <div class="overlay"></div>
+                    <img src="/img/square-iceland.jpg">
+                    <h3 class="read-another">Land of Fire &amp; Ice</h3>
+                </div></a>
+                <a href="post.html"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+                    <div class="overlay"></div>
+                    <img src="/img/square-spain.jpg">
+                    <h3 class="read-another">The Coast of Your Mind</h3>
+                </div></a>
+                <a href="post.html"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+                    <div class="overlay"></div>
+                    <img src="/img/square-peak.jpg">
+                    <h3 class="read-another">Get Out of Your Comfort Zone</h3>
+                </div></a>
+                <a href="post.html"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+                    <div class="overlay"></div>
+                    <img src="/img/square-woods.jpg">
+                    <h3 class="read-another">Not All Who Wander Are Lost</h3>
+                </div></a>
+                <a href="post.html"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+                    <div class="overlay"></div>
+                    <img src="/img/square-sunset.jpg">
+                    <h3 class="read-another">Open Your Mind</h3>
+                </div></a>
+                <a href="post.html"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+                    <div class="overlay"></div>
+                    <img src="/img/square-mountain.jpg">
+                    <h3 class="read-another">Ten Reasons to Hike</h3>
+                </div></a>
+            </div>
+        </footer>
+        
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="/js/vendor/jquery.jpanelmenu.min.js"></script>
