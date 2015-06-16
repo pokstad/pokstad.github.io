@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: [fitness, gear, bodyweight]
 ---
 This is a very solid piece of equipment geared towards doing two important bodyweight exercises: dips and bodyweight rows.
 

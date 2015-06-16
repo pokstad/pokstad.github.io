@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: [fitness, gear, kettlebells]
 ---
 I got some new toys from Functional Equipment in Costa Mesa:
 

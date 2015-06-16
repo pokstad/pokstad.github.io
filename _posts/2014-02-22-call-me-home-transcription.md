@@ -2,6 +2,7 @@
 layout: post
 title: Call Me Home by Kelvin Jones
 readingTime: 5
+tags: [music]
 ---
 Got those eyes that stare into my soul
 Got that smile when I’m giving you my all

@@ -97,11 +97,11 @@ title: Blogging Like a Hacker
                     
                     <div class="home-page-categories hide animated fadeIn ">
                         <div class="category row">
-                            <section>
+                            <section id="category_section">
                                 {% for data_tag in site.data.tags %}
-                                <div class="category-preview col-xs-6 col-sm-4 ">
+                                <div class="category-preview col-xs-6 col-sm-4">
                                     <h2>{{ data_tag.name }}</h2>
-                                    <a href="/blog/tag/{{ data_tag.slug }}/"><img src="{% if data_tag.thumbnail %}{{ data_tag.thumbnail }}{% else %}img/cover-2.jpg{% endif %}" alt="category-image"></a>
+                                    <a href="/blog/tag/{{ data_tag.slug }}/"><img src="{% if data_tag.thumbnail %}{{ data_tag.thumbnail }}{% else %}img/cover-2.jpg{% endif %}" alt="category-image"></img></a>
                                 </div>
                                 {% endfor %}
                             </section>

@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: [couchdb]
 ---
 One of the big problems with using a heavy client side web app is search engine optimization (SEO). Historically, search engines crawled the web and built their index using pre-rendered webpages. What we mean by pre-rendered is that web pages are generated (at least mostly) by a web server before the client (in this case the web crawler) receives them. This is much easier for the web crawler because it simply needs to download the HTML file and scan it to build an index.
 

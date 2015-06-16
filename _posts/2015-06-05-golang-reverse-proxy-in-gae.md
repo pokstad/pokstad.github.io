@@ -3,7 +3,7 @@ layout: post
 title: Implementing a reverse proxy in Golang on Google App Engine
 hero_image: /downloads/golang-gae-couch.jpg
 readingTime: 15
-tags: [golang, app-engine, couchdb]
+tags: [code, golang, app-engine, couchdb]
 ---
 
 Google runs an interesting PaaS (Platform as a Service) called App Engine. It allows you to write code in one of four language/environments: PHP, Python, Java, and *Go*. Go is currently a beta offering but already offers the same features as the other three.

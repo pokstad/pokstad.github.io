@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: [couchdb]
 ---
 If you try modifying the CouchDB configuration file to bind to port 80, you will not be able to access the server. This is because non-root processes cannot bind to port numbers lower than 1024 (these are "privileged" port numbers).
 

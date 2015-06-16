@@ -1,6 +1,7 @@
 ---
 layout: post
 excerpt: Review of the GW3000BB
+tags: [gear, watches]
 ---
 ![GW3000BB](/downloads/gw3000bb-01.jpg)
 ![GW3000BB](/downloads/gw3000bb-02.jpg)

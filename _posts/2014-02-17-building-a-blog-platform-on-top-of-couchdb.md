@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: [couchdb]
 ---
 In building this site, I wanted to accomplish something unique. Not just another blog hosted on Wordpress/Blogger/Tumblr. Also, I was bored of all the server side options (Django/Flask/Node). They all had weaknesses, whether it be the limitations of creating new code or the server technology delivering the HTTP responses. I ultimately planned to experiment by building a blog platform on top of CouchDB.
 

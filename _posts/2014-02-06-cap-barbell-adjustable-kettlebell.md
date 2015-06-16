@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: [fitness, kettlebells, gear]
 ---
 I have mixed feelings about this kettlebell. On one hand, being adjustable is great. You can start with a really low weight and perfect form in a much safer environment. Changing weight on this kettlebell is extremely easy and the build quality is very high. The large round shape of the kettlebell also means that the surface area that comes into contact with your forearm during cleans is less sharp/curved which reduces bruising.
 

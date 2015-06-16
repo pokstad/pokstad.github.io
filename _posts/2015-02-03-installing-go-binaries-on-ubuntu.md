@@ -2,6 +2,7 @@
 layout: post
 excerpt: Recently, I had the need to install Go on my Ubuntu server and discovered that Ubuntu does not contain the latest version of Go. How do we install it?
 readingTime: 5
+tags: [golang, ubuntu]
 ---
 Go is a great tool for deploying applications since by default it generates a single statically linked binary with all application dependencies packed neatly inside. Recently, I had the need to install Go on my Ubuntu server and discovered that Ubuntu does not contain the latest version of Go. How do we install it?
 

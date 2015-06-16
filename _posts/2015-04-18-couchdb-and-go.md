@@ -3,6 +3,7 @@ layout: post
 title: CouchDB Reverse Proxy and Middleware in Go
 hero_image: /downloads/gopher_on_couch.jpg
 readingTime: 10
+tags: [code, golang, couchdb]
 ---
 
 Erlang and Go are mortal enemies, very true, but Go is also more pragmatic to the majority of programmers out there that learned C-based syntax and OOP strategies. I like Go a LOT, which is why I use Go in front of CouchDB. Previously I used Python, but there are so many problems with type errors and efficiently serving Python web code (Apache/Gunicorn/Greenlets/PyPy/Nginx/headaches...). Go is built to serve websites out of the box with their awesome HTTP library and Goroutines. It's also built to check code for safety.

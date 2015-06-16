@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: [fitness, kettlebells, gear]
 ---
 I purchased a 53 lb (24kg) Anvil kettlebell from functionalequipment.com in Costa Mesa, CA. I really like this kettlebell, and I wish Functional Fitness would keep their inventory stocked so I could buy a another one.
 
