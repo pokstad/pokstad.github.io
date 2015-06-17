@@ -26,14 +26,7 @@ layout: default
         <div class="row">
 
             <div id="menu-target">
-                <ul>
-                    <li><i class="fa fa-home"></i><a href="/index.html">Home</a></li>
-                    <li><i class="fa fa-user"></i><a href="/author.html">Paul Okstad</a></li>
-                    <li><i class="fa fa-star"></i><a href="/favorites.html">Favorites</a></li>
-                    <li><i class="fa fa-twitter"></i><a class="social-icon" href="https://www.twitter.com/pokstad">Twitter</a></li>
-                    <li><i class="fa fa-facebook-official"></i><a class="social-icon" href="https://www.facebook.com/pokstad">Facebook</a></li>
-                    <li><i class="fa fa-paper-plane"></i><a href="mailto:pokstad@icloud.com">Email</a></li>
-                </ul>
+                {% include menu_links.html %}
             </div>
             <section class="sidebar category-sidebar col-md-5 col-sm-12" style="background-image: url({% if page.sidebar %}{{ page.sidebar }}{% else %}/img/default-category-sidebar.jpg{% endif %});">
 
@@ -46,14 +39,7 @@ layout: default
                 <!-- if the user has javascript disabled they can still use the menu -->
                 <noscript>
                     <div class="no-js-menu">
-                        <ul>
-                            <li><i class="fa fa-home"></i><a href="/index.html">Home</a></li>
-                            <li><i class="fa fa-user"></i><a href="/author.html">Paul Okstad</a></li>
-                            <li><i class="fa fa-star"></i><a href="/favorites.html">Favorites</a></li>
-                            <li><i class="fa fa-twitter"></i><a class="social-icon" href="https://www.twitter.com/pokstad">Twitter</a></li>
-                            <li><i class="fa fa-facebook-official"></i><a class="social-icon" href="https://www.facebook.com/pokstad">Facebook</a></li>
-                            <li><i class="fa fa-paper-plane"></i><a href="mailto:pokstad@icloud.com">Email</a></li>
-                        </ul>
+                        {% include menu_links.html %}
                     </div>
                 </noscript>
                 <!-- end no script -->
@@ -95,14 +81,6 @@ layout: default
             </section><!-- main content -->
         </div> <!--/row -->
     </main> <!-- /container -->
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
-        <script src="/js/vendor/jquery.jpanelmenu.min.js"></script>
-        <script src="/js/vendor/bootstrap.min.js"></script>
-        <script src="/js/vendor/fastclick.min.js"></script>
-
-        <script src="/js/main.js"></script>
+        {% include javascript.html %}
     </body>
 </html>
