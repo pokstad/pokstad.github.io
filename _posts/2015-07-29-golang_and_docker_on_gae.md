@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Golang and Docker on Google App Engine Managed VMs
-tags: [golang, gae]
+tags: [code, golang, gae]
 hero_image: /downloads/t_arrows.jpg
 readingTime: 30
 ---
