@@ -110,7 +110,7 @@ In order to deploy, first make sure that the application name matches the projec
 
 Where `/path/to/myapp` is the location of the directory containing the 3 application files.
 
-This new module should be accessible from https://module2.<project ID>.appspot.com/
+This new module should be accessible from https://module2.PROJECT_ID.appspot.com/
 
 Here's the fun part, try accessing the following URLs:
 
