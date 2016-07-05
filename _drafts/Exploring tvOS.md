@@ -1,0 +1,3 @@
+
+
+["audio/aacp", "video/3gpp2", "audio/mpeg3", "audio/mp3", "audio/x-caf", "audio/mpeg", "video/quicktime", "audio/x-mpeg3", "video/mp4", "audio/wav", "video/avi", "audio/scpls", "audio/mp4", "audio/x-mpg", "video/x-m4v", "audio/x-wav", "audio/x-aiff", "application/vnd.apple.mpegurl", "video/3gpp", "text/vtt", "audio/x-mpeg", "audio/wave", "audio/x-m4r", "audio/x-mp3", "audio/AMR", "audio/aiff", "audio/3gpp2", "audio/aac", "audio/mpg", "audio/mpegurl", "audio/x-m4b", "application/mp4", "audio/x-m4p", "audio/x-scpls", "audio/x-mpegurl", "audio/x-aac", "audio/3gpp", "audio/basic", "audio/x-m4a", "application/x-mpegurl"]

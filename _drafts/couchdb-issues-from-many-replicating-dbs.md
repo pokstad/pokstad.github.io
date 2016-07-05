@@ -8,7 +8,7 @@ I'll be using Safari on Mac OS X Yosemite (10.10) to perform this experiment sin
 
 The following Github hosted gist contains the HTML and Javascript code needed to run the experiment. It references external Javascript libraries so it requires Internet access.
 
-
+[TODO: Make example code offline and portable]
 
 ## Problems Identified ##
 

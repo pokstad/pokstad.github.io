@@ -1,0 +1,120 @@
+html {
+    background-image:url(/img/weddingtree.jpg);
+	background-position: 50% 100%;
+    background-size:cover;
+    background-attachment:fixed;
+	height: 100%;
+}
+
+body {
+	font-family: "Raleway", "-apple-system", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:#fff;
+	font-weight: 100;
+}
+
+div .container {
+	overflow:auto
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+a {
+	color:#fff;
+}
+
+a:hover {
+	color:#000;
+	text-shadow:1px 0 1px #888888;
+}
+
+.sidebar {
+}
+
+.sidebar a:hover {
+	color:#000;
+	background-color:#eeeeee;
+}
+
+h1,h2,h3,h4,h5 {
+	text-shadow:1px 0 1px #888888;
+}
+
+.sidebar hr {
+	width:10em;
+}
+
+.sidebar nav a {
+	text-decoration: none;
+}
+
+.sidebar nav li {
+	list-style: none;
+}
+
+.sidebar nav ul ul {
+    display: none;
+    transition: opacity 1s;
+}
+
+.out {
+    opacity: 0;
+}
+.in {
+    opacity: 1;
+}
+
+.right-content .post {
+	background:rgba(0,0,0,0.5);
+}
+
+.right-content .article:hover {
+	background:rgba(0,0,0,0.7);
+}
+
+.right-content h5 a {
+	text-decoration: none;
+}
+
+.right-content hr {
+	margin-bottom: 0px;
+	margin-top: 0px;
+	border-top-width: 2px;
+}
+
+.right-content .row {
+	margin-top: 0px;
+	background: none;
+	transition-property: background;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+}
+
+.right-content h5 {
+	margin-bottom:0;
+	font-weight:400;
+}
+
+.right-content button {
+	padding-left: 10px;
+	padding-right: 10px;
+	line-height: 20px;
+	height: 2em;
+	background-color: #800000;
+	border-color: #800000;
+}
+
+.right-content button:hover {
+	background-color: #996464;
+	border-color: #996464;
+}
+
+code {
+	color:#000;
+}

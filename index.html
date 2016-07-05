@@ -1,110 +1,37 @@
 ---
-layout: default
-title: Blogging Like a Hacker
+layout: sidebar
+title: Pokstad = Paul Okstad
+subtitle: Long Beach, CA
+background: /downloads/background.jpg
 ---
-<!DOCTYPE html>
-<html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Paul Okstad</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/main.css">
-
-        <!--[if lt IE 9]>
-            <script src="/js/vendor/html5shiv.min.js"></script>
-        <![endif]-->
-
-        <script src="js/vendor/modernizr.custom.32229-2.8-respondjs-1-4-2.js"></script>
-    </head>
-    <body>
-        <main class="container left-container">
-            <div class="row">
-
-                <div id="menu-target">
-                    {% include menu_links.html %}
-                </div>
-
-                <section class="sidebar col-md-5 col-sm-12" style="background-image: url(/downloads/background.jpg)">
-
-                    <span class="menu-trigger animated fadeInDown">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </span>
-
-                    <!-- if the user has javascript disabled they can still use the menu -->
-                    <noscript>
-                        <div class="no-js-menu">
-                            {% include menu_links.html %}
-                        </div>
-                    </noscript>
-                    <!-- end no script -->
-
-                    <div class="site-info">
-                        <div class="primary-info">
-                            <h1>Paul Okstad</h1>
-                            <p>Long Beach, CA</p>
-                        </div>
-                        <div class="secondary-info">
-                            <p>Code, Fitness, Life</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="col-md-7 col-sm-12 col-md-offset-5 main-content">
-
-                    <div class="sub-nav">
-                        <a href="#" class="select-posts active">Posts</a>
-                        <a href="#" class="select-categories">Categories</a>
-                    </div>
-
-                    <div class="home-page-posts animated fadeIn ">
-                    {% for post in site.posts %}
-                        <article class="post">
-                            <div class="post-preview col-xs-10  no-gutter">
-                                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                                {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
-                                <p class="meta">
-                                     {{ post.date | date: '%B %d, %Y' }} <a class="" href="category.html">Paul Okstad</a> in <a class="" href="category.html">{{ post.category }}</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> {{ post.readingTime }} minute read
-                                </p>
-                            </div>
-
-                            <div class=" col-xs-2  no-gutter">
-                                <img src="/downloads/tobyhead.jpg" class="user-icon" alt="user-image">
-                            </div>
-                        </article>
-                    {% endfor %}
-                    </div>
-                    
-                    <div class="home-page-categories hide animated fadeIn ">
-                        <div class="category row">
-                            <section id="category_section">
-                                {% for data_tag in site.data.tags %}
-                                <div class="category-preview col-xs-6 col-sm-4">
-                                    <h2>{{ data_tag.name }}</h2>
-                                    <a href="/blog/tag/{{ data_tag.slug }}/"><img src="{% if data_tag.thumbnail %}{{ data_tag.thumbnail }}{% else %}img/cover-2.jpg{% endif %}" alt="category-image"></img></a>
-                                </div>
-                                {% endfor %}
-                            </section>
-                        </div>
-                    </div>
-                </section><!-- Home page posts -->
-
-                
-                <footer class="split-footer">
-                    <a href="post.html">About</a>
-                    <i class="link-spacer"></i>
-                    <a href="post.html">pokstad.com 2015</a>
-                </footer>
-
-            </div> <!--/row -->
-
-        </main> <!-- /container -->
-        {% include javascript.html %}
-    </body>
-</html>
+<div class="row">
+	<h3 id="featured">Featured</h3>
+	<div class="row article">
+		<hr/>
+		<h5><a href="/sofaking/">Introducing Sofa King: Sync</a></h5>
+		<div class="row">
+			<div class="three columns">
+				<img class="u-max-full-width" src="/img/sofaking_bw.png"/>
+			</div>
+			<div class="nine columns">
+				<p>My latest iOS project is <strong>Sofa King: Sync</strong>. It is a mobile database replication app that allows you to sync datasets from your server to your pocket. It is written almost entirely in Swift and is a launching point for some interesting concepts I want to test out on Apple's newest tech.</p>
+			</div>
+		</div>
+		<hr/>
+	</div>
+</div>
+<div class="row">
+	<h3 id="all_articles">All Articles</h3>
+	<hr/>
+	{% for post in site.posts %}
+	<div class="row article">
+		<h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+		<p><small>{{ post.date | date: "%B %-d, %Y"  }} • <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> {{ post.readingTime }} minute read</small><br/>
+		{% for tag in post.tags %}
+		<a href="#"><button class="button-primary">{{ tag }}</button></a>
+		{% endfor %}
+		</p>
+		<hr/>
+	</div>
+	{% endfor %}
+</div>
