@@ -7,6 +7,7 @@ html {
 }
 
 body {
+	margin-top:30px;
 	font-family: "Raleway", "-apple-system", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color:#fff;
 	font-weight: 100;
@@ -50,6 +51,12 @@ h1,h2,h3,h4,h5 {
 	width:10em;
 }
 
+.sidebar nav {
+	border-top-style: inset;
+	padding:10px;
+	background:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0));
+}
+
 .sidebar nav a {
 	text-decoration: none;
 }
@@ -74,23 +81,17 @@ h1,h2,h3,h4,h5 {
 	background:rgba(0,0,0,0.5);
 }
 
-.right-content .article:hover {
-	background:rgba(0,0,0,0.7);
+.row .article {
+	background:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0));
+	border-top-width: 2px;
+	border-top-style: inset;
 }
 
 .right-content h5 a {
 	text-decoration: none;
 }
 
-.right-content hr {
-	margin-bottom: 0px;
-	margin-top: 0px;
-	border-top-width: 2px;
-}
-
 .right-content .row {
-	margin-top: 0px;
-	background: none;
 	transition-property: background;
 	transition-duration: 0.5s;
 	transition-timing-function: linear;

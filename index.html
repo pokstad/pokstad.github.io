@@ -5,9 +5,8 @@ subtitle: Long Beach, CA
 background: /downloads/background.jpg
 ---
 <div class="row">
-	<h3 id="featured">Featured</h3>
+	<h2 id="featured">Featured</h2>
 	<div class="row article">
-		<hr/>
 		<h5><a href="/sofaking/">Introducing Sofa King: Sync</a></h5>
 		<div class="row">
 			<div class="three columns">
@@ -17,21 +16,16 @@ background: /downloads/background.jpg
 				<p>My latest iOS project is <strong>Sofa King: Sync</strong>. It is a mobile database replication app that allows you to sync datasets from your server to your pocket. It is written almost entirely in Swift and is a launching point for some interesting concepts I want to test out on Apple's newest tech.</p>
 			</div>
 		</div>
-		<hr/>
 	</div>
 </div>
 <div class="row">
-	<h3 id="all_articles">All Articles</h3>
-	<hr/>
+	<h2 id="all_articles">All Articles</h2>
 	{% for post in site.posts %}
 	<div class="row article">
 		<h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-		<p><small>{{ post.date | date: "%B %-d, %Y"  }} • <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> {{ post.readingTime }} minute read</small><br/>
-		{% for tag in post.tags %}
-		<a href="#"><button class="button-primary">{{ tag }}</button></a>
-		{% endfor %}
-		</p>
-		<hr/>
+		<small>{{ post.date | date: "%B %-d, %Y"  }} • <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> {{ post.readingTime }} minute read</small><br/>
+		{% for tag in post.tags %}<a href="#"><button class="button-primary">{{ tag }}</button></a>{% endfor %}
 	</div>
+	<br/>
 	{% endfor %}
 </div>
