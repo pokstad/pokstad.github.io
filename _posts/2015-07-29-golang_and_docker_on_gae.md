@@ -2,7 +2,7 @@
 layout: post
 title: Golang and Docker on Google App Engine Managed VMs
 tags: [code, golang, gae]
-hero_image: /downloads/t_arrows.jpg
+hero_image: /img/t_arrows.jpg
 readingTime: 30
 ---
 Docker hasn't been around very long, but already it's all the rage in the tech world. Amazon is supporting Docker through a number of offerings, one of which is Elastic Beanstalk. Google has also been offering support, and one of those new services is called Google App Engine Managed VM's.
