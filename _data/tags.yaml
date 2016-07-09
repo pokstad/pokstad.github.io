@@ -23,3 +23,7 @@
   main_category: fitness
   thumbnail: /downloads/category_kb.jpg
 
+- slug: ios
+  name: iOS
+  main_category: code
+  thumbnail: /downloads/category_code.jpg

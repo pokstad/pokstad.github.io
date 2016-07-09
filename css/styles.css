@@ -1,36 +1,66 @@
 html {
+	/*
     background-image:url(/img/weddingtree.jpg);
 	background-position: 50% 100%;
     background-size:cover;
     background-attachment:fixed;
 	height: 100%;
+	*/
 }
 
 body {
-	margin-top:30px;
 	font-family: "Raleway", "-apple-system", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	/*
 	color:#fff;
 	font-weight: 100;
+	*/
 }
 
-div .container {
+h1 a {
+	text-decoration:none;
+	color:#000;
+}
+
+div.container {
 	overflow:auto
 }
 
-canvas {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
+div.section.hero {
+	background-image:url(/img/catalinaandsun.jpg);
+	background-position: 100% 100%;
+	background-size:cover;
+	margin-bottom:1em;
+	display: flex;
 }
 
-a {
+div.section.hero h1,
+div.section.hero h2 {
+	color:#000;
+	text-shadow:1px 0 1px #fff;
+}
+
+.whitefade {
+	align-items: stretch;
+	padding: 15rem 0 8rem;
+	max-width: 100%;
+	margin:0 0 0 0;
+	width:100%;
+	background:linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,0.7));
+}
+
+div.row.article {
+	display: flex;
+}
+
+div.row.article canvas {
+	align-items: stretch;
+}
+
+.sidebar a {
 	color:#fff;
 }
 
-a:hover {
+.sidebar a:hover {
 	color:#000;
 	text-shadow:1px 0 1px #888888;
 }
@@ -43,7 +73,11 @@ a:hover {
 	background-color:#eeeeee;
 }
 
-h1,h2,h3,h4,h5 {
+.sidebar h1,
+.sidebar h2,
+.sidebar h3,
+.sidebar h4,
+.sidebar h5 {
 	text-shadow:1px 0 1px #888888;
 }
 
@@ -77,45 +111,47 @@ h1,h2,h3,h4,h5 {
     opacity: 1;
 }
 
-.right-content .post {
-	background:rgba(0,0,0,0.5);
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+	/*background-color:#fff;*/
+	width:40px;
 }
 
-.row .article {
-	background:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0));
-	border-top-width: 2px;
-	border-top-style: inset;
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
 }
 
-.right-content h5 a {
-	text-decoration: none;
+/* Rotate first bar */
+.change .bar1 {
+    transform: rotate(-45deg) translate(-9px, 6px) ;
 }
 
-.right-content .row {
-	transition-property: background;
-	transition-duration: 0.5s;
-	transition-timing-function: linear;
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
 }
 
-.right-content h5 {
-	margin-bottom:0;
-	font-weight:400;
+/* Rotate last bar */
+.change .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px) ;
 }
 
-.right-content button {
-	padding-left: 10px;
-	padding-right: 10px;
-	line-height: 20px;
-	height: 2em;
-	background-color: #800000;
-	border-color: #800000;
+nav li {
+	list-style-type: none;
 }
 
-.right-content button:hover {
-	background-color: #996464;
-	border-color: #996464;
-}
-
-code {
+nav a {
 	color:#000;
+	text-decoration:none;
+}
+
+nav a:hover {
+	color:#fff;
+	background-color:#000;
+	text-decoration:none;
 }
