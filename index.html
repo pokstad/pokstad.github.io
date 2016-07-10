@@ -10,7 +10,7 @@ summary: "Just a cool motherfucker"
 </div>
 {% for post in site.posts %}
 	<div class="row">
-		<div class="six columns">
+		<div class="four columns">
 			{% if post.hero_image %}
 			<img class="u-max-full-width" src="{{ post.hero_image }}"/>
 			{% else %}
@@ -29,7 +29,7 @@ summary: "Just a cool motherfucker"
 			</script>
 			{% endif %}
 		</div>
-		<div class="six columns">
+		<div class="eight columns">
 			<a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
 			<h5>{{ post.date | date: "%B %-d, %Y"  }}</h5>
 			<p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
