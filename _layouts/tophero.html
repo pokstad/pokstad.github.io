@@ -1,0 +1,19 @@
+---
+layout: base
+---
+<div class="section hero" style="background-image:url({% if page.hero_image %}{{ page.hero_image }}{% else %}/img/catalinaandsun.jpg{% endif %})">
+	<div class="whitefade">
+		<div class="container">
+			<div class="row">
+				{% include navigation_menu.html %}
+				<h1><a href="/">Paul Okstad</a></h1>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container" style="margin-top:5%;">
+	{{ content }}
+	<div class="footer row" style="text-align:center;margin-bottom:2em;">
+		All Writing By Paul Okstad
+	</div>
+</div>
