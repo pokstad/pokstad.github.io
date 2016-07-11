@@ -6,47 +6,151 @@ layout: base
 	<div class="row" style="text-align:center">
 		<h1>Paul Okstad</h1>
 		<p><strong>Software Engineer • Full Stack Developer • Mobile Developer</strong></p>
-		<button class="button-primary">Download PDF</button>
+		<p><a href="mailto:pokstad@icloud.com">pokstad@icloud.com</a></p>
+		<p>Long Beach, CA</p>
+		<button class="button-primary">Download PDF Resume</button>
 	</div>
-	<h2>Objective</h2>
-	<p>I came here to kick ass and chew bubblegum... and I'm all out of bubblegum.</p>
+	<h2>Philosophy</h2>
+	<p>My ultimate career goal is to always make my last role obsolete through a combination of engineering and mentoring. I believe that being transparent and sharing knowledge creates the best collaboration environment with my peers. Software engineering is extremely rewarding when you constantly push yourself to conquer problems so that you can focus on the next one. Being a good engineer means that you must always be willing to get out of your comfort zone to learn a new skill or approach a problem differently. Software is enabling the human race to become exponentially efficient in everything that we do and I am excited to be a part of that.</p>
 	<h2>Experience</h2>
 	<hr/>
 	<div class="row">
-		<div class="five columns">
+		<div class="four columns">
 			<h5>Hard Coded Fitness, LLC</h5>
 			<p>Partner & Co-Developer</p>
-			<p><strong>2009-present</strong></p>
+			<p><strong>2010-present</strong></p>
 		</div>
-		<div class="seven columns">
-			<p>My partner and I founded Hard Coded Fitness to explore designing an innovative fitness app that did more with less.</p>
+		<div class="eight columns">
+			<p>My friend and I founded HCF to design an innovative fitness app that did more with less. It has been a rewarding journey. Being a two man shop, we wear many hats and have learned many lessons throughout the life of the product.</p>
 			<p><strong>Achievements</strong></p>
 			<ul>
-				<li>Designed Customer Identity & Sync Service</li>
+				<li>Co-developed the best selling app, Bodyweight Training: You Are Your Own Gym, that revolutionized bodyweight and functional fitness</li>
+				<li>Maintained strong customer relations on our paid app that has earned us a strong 5 star rating with over 3200 reviews</li>
+				<li>Iterative improvements to UX/UI driven directly by customer feedback</li>
+				<li>Devised localization strategy to translate our app for major growth regions</li>
+				<li>Designed and deployed Customer Account & Sync Service</li>
+				<li>Developed user facing web app using Google App Engine with Golang</li>
+				<li>Automated mobile database import using Objective-C, Python scripts and Google Docs</li>
+				<li>Shared general business responsibilities</li>
 			</ul>
 			<p><strong>Skills Exercised</strong></p>
 			<ul>
-				<li>iOS Programming</li>
+				<li>
+					iOS Development
+					<ul>
+						<li>Core Data & Sqlite backend</li>
+						<li>CouchDB (NoSQL) Sync System</li>
+						<li>JSON and Plist data import/export</li>
+						<li>Web services</li>
+					</ul>
+				</li>
+				<li>
+					Server & Devops
+					<ul>
+						<li>Built custom CouchDB system on Ubuntu</li>
+						<li>Developed custom Python task queue based on CouchDB</li>
+						<li>Developed Golang based web services on AWS and Google App Engine</li>
+						<li>Deployed to AWS with custom Python build system</li>
+						<li>Developed data backup system using Rsync and CouchDB</li>
+					</ul>
+				</li>
+				<li>
+					Front end web development
+					<ul>
+						<li>Developed custom Bootstrap components using React.js </li>
+						<li>Javascript AJAX used for communicating to CouchDB server and Google services</li>
+						<li>Experimented using client-side Javascript templates (Hogan.js) for rendering HTML content</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</div>
 	<hr/>
 	<div class="row">
-		<div class="five columns">
+		<div class="four columns">
 			<h5>The Boeing Company</h5>
 			<p>Systems Engineer</p>
 			<p><strong>2006-2014</strong></p>
 		</div>
-		<div class="seven columns">
-			<p>Boeing was where I developed my engineer foundation as an intern.</p>
+		<div class="eight columns">
+			<p>Being on multiple defense programs, I worked on highly critical systems that required a respect for safety and security. I not only needed to work responsibly, but I also needed to be flexible and react to new issues quickly as they arose.</p>
 			<p><strong>Achievements</strong></p>
 			<ul>
-				<li>Designed Customer Identity & Sync Service</li>
+				<li>Improved network test efficiency for high reliability communications network.</li>
+				<li>Developed C# .Net Windows application for interfacing with legacy satellite comm gear.</li>
+				<li>Devised solution for automating performance monitoring of legacy serial communication links to help government decision making.</li>
+				<li>Developed screen scraping applications for monitoring status and configuration control of critical communications gear</li>
+				<li>Simulated expensive control unit in Python to assist in trouble shooting effort in testbed.</li>
 			</ul>
 			<p><strong>Skills Exercised</strong></p>
 			<ul>
-				<li>iOS Programming</li>
+				<li>Telecommunications
+					<ul>
+						<li>Tcl Expect for screen scraping telnet/ssh sessions.</li>
+						<li>Data analysis and text processing using Perl and Python scripts.</li>
+						<li>Wrote XML and Excel data report generation for various activities</li>
+					</ul>
+				</li>
+				<li>Information Assurance
+					<ul>
+						<li>Remediated servers using DISA STIG guidelines</li>
+						<li>Automated IA remediation on ESXi and Solaris systems using Bash and Python scripting</li>
+					</ul>
+				</li>
+				<li>Virtualization & Devops
+					<ul>
+						<li>Developed procedures and manuals for deploying ESXi based servers</li>
+						<li>Extensive use of VirtualBox to streamline server development activities</li>
+						<li>Automated RHEL/Oracle software stack installation using Python and kickstart scripts</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
+		<h2>Projects</h2>
+		<hr/>
+		<div class="row">
+			<div class="four columns">
+				<h5>Sofa King: Sync</h5>
+				<p><strong>July 2016</strong></p>
+			</div>
+			<div class="eight columns">
+				<p>I developed Sofa King: Sync as an experimental iOS app for demonstating various Apple technologies.</p>
+				<p><strong>Features</strong></p>
+				<ul>
+					<li>Written almost entirely in Swift in the latest Xcode release.</li>
+					<li>Utilizes Cloudant Sync (CDTDatastore) to replicate data from remote servers and store locally on device</li>
+					<li>Uses innovative JSON explorer interface for diving into each layer of the object model</li>
+					<li>Embraces best practices for protecting user credentials, such as mandatory SSL and iOS keychain</li>
+					<li>Exposes CouchDB HTTP API in an intuitive fashion</li>
+				</ul>
+			</div>
+		</div>
+		<h2>Education</h2>
+		<hr/>
+		<div class="row">
+			<div class="four columns">
+				<h5>California State University Long Beach</h5>
+				<p><strong>Computer Science B.S. 2009</strong></p>
+			</div>
+			<div class="eight columns">
+				<p><strong>Semester Courses Taken</strong></p>
+				<ul>
+					<li>Programming and Problem Solving with C++ (I,II,III)</li>
+					<li>Computer Logic Design (I,II)</li>
+					<li>Discrete Structures with Computer Science Applications (I,II)</li>
+					<li>Computing with Java</li>
+					<li>Database Fundamentals</li>
+					<li>Computer Organization and Assembly Language Programming</li>
+					<li>Operating Systems</li>
+					<li>Net-Centric Computing</li>
+					<li>Software Engineering</li>
+					<li>Computer Architecture</li>
+					<li>Compiler Construction</li>
+					<li>Computer Network Interoperability</li>
+					<li>Object-Oriented Programming with C#</li>
+				</ul>
+			</div>
+		</div>
 	</div>
+	
 </div>

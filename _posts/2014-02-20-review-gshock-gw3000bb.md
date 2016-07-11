@@ -1,17 +1,18 @@
 ---
+title: Casio G-Shock GW3000BB Review
 layout: post
 excerpt: Review of the GW3000BB
 tags: [gear, watches]
 ---
-![GW3000BB](/downloads/gw3000bb-01.jpg)
-![GW3000BB](/downloads/gw3000bb-02.jpg)
-![GW3000BB](/downloads/gw3000bb-03.jpg)
-![GW3000BB](/downloads/gw3000bb-04.jpg)
-![GW3000BB](/downloads/gw3000bb-05.jpg)
-![GW3000BB](/downloads/gw3000bb-06.jpg)
-![GW3000BB](/downloads/gw3000bb-07.jpg)
-![GW3000BB](/downloads/gw3000bb-08.jpg)
-![GW3000BB](/downloads/gw3000bb-09.jpg)
+![GW3000BB](/downloads/gw3000bb-01.jpg){: .u-max-full-width }
+![GW3000BB](/downloads/gw3000bb-02.jpg){: .u-max-full-width }
+![GW3000BB](/downloads/gw3000bb-03.jpg){: .u-max-full-width }
+![GW3000BB](/downloads/gw3000bb-04.jpg){: .u-max-full-width }
+![GW3000BB](/downloads/gw3000bb-05.jpg){: .u-max-full-width }
+![GW3000BB](/downloads/gw3000bb-06.jpg){: .u-max-full-width }
+![GW3000BB](/downloads/gw3000bb-07.jpg){: .u-max-full-width }
+![GW3000BB](/downloads/gw3000bb-08.jpg){: .u-max-full-width }
+![GW3000BB](/downloads/gw3000bb-09.jpg){: .u-max-full-width }
 
 ## Pros ##
 * Syncs to atomic clock in CO.

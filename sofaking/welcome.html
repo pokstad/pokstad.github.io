@@ -1,141 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-		<!-- Basic Page Needs
-		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<meta charset="utf-8">
-		<title>Welcome to Sofa King!</title>
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<!-- Mobile Specific Metas
-		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- CSS
-		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<link rel="stylesheet" href="./normalize.css">
-		<link rel="stylesheet" href="./skeleton.css">
-		<!-- Favicon
-		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<link rel="icon" type="image/png" href="./favicon.png">
-    </head>
-    <body>
-        <!-- Primary Page Layout
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-        <div class="container">
-            <div class="row" style="margin-top: 25%">
-                <div class="one-half column category" style="text-align:center">
-					<h2>Sofa King: Sync</h2>
-                    <img class="u-max-full-width" src="sofaking_bw.png"/>
-					<a class="button button-primary" href="https://itunes.apple.com/us/app/sofa-king-sync/id1129432984?mt=8">Get Sofa King: Sync</a>
-                </div>
-                <p><strong>Sofa King: Sync</strong> is a mobile database replication app that allows you to sync datasets from your server to your pocket.</p>
-                <h5>Features &amp; Specs</h5>
-                <ul>
-                    <li>Compatible with <a href="https://couchdb.apache.org">Apache CouchDB</a> and <a href="https://cloudant.com">IBM Cloudant</a> databases.</li>
-                    <li>Innovative <a href="http://json.org">JSON</a> document interface. Drill down into each successive layer of a JSON tree without getting lost in the forest.</li>
-                    <li>Locally stores a list of your favorite CouchDB servers.</li>
-                    <li>Server credentials are stored securely using iOS keychain.</li>
-                    <li>SSL enforced. Connections to servers using credentials require HTTPS (but HTTP is okay for anonymous usage).</li>
-                    <li>Side effect free design. All network requests require explicit user action to ensure you only speak to your server when you desire.</li>
-                    <li>No ads; Distraction free usage.</li>
-                    <li>Absolutely no warranty. Use it like you stole it.</li>
-                </ul>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<h5>Roadmap</h5>
-				<p>Here are some of the features I would love to explore adding in the future:</p>
-				<ul>
-					<li>
-						Rapid editing of JSON docs
-					</li>
-					<li>
-						Backup server info and databases with iCloud account
-					</li>
-					<li>
-						TouchID protection
-					</li>
-					<li>
-						Store favorite JSON docs in central location
-					</li>
-					<li>
-						Map Reduce views powered locally by Javascript Core and GCD
-					</li>
-					<li>
-						Schema support
-					</li>
-					<li>
-						Javascript triggers
-					</li>
-					<li>
-						Background replication
-					</li>
-					<li>
-						Database sharing
-					</li>
-				</ul>
-			</div>
-			<div class="row">
-				<h5>FAQ</h5>
-				<ul>
-					<li>
-						<p><Strong>Who is this app intended for?</Strong></p>
-						<p>Anyone who relies on CouchDB to store important information and wishes to carry that dataset with them.</p>
-					</li>
-					<li>
-						<strong><p>Why can't I sync databases that start with an underscore?</p></strong>
-						<p>This is a limitation of CDTDatastore (Cloudant Sync) which is how the app replicates from the server. I am looking into it.</p>
-					</li>
-					<li>
-						<strong><p>What kind of datasets can I download?</p></strong>
-						<p>The app may hang when downloading datasets of several thousand documents. This is a high priority issue that I am focusing on. In the future we may use a more efficient replication method or use background processing.</p>
-					</li>
-					<li>
-						<strong><p>Will you open source the code?</p></strong>
-						<p>The app itself will remain closed source, but a critical library I am developing may become open sourced if I am able to package it properly.</p>
-					</li>
-					<li>
-						<p><strong>Where can I file a bug report?</strong></p>
-						<p>You can file a bug report here at the <a href="https://bitbucket.org/pokstad/couchgod/issues?status=new&status=open">bitbucket repo.</a></p>
-					</li>
-					<li>
-						<p><strong>I have a dataset I think would be a great fit in your playground. How can I go about adding it?</strong></p>
-						<p><a href="mailto:pokstad@icloud.com">Email me!</a></p>
-					</li>
-				</ul>
-			</div>
-			<div class="row">
-				
-                <h5>Your Humble Dev</h5>
-                <p>Hi, I'm <a href="http://pokstad.com/author.html">Paul</a> and I made this for you because I think you're awesome. This software is free to use, so don't expect the world. Like it? Hate it? Feature request? Have some feedback? <a href="mailto:pokstad@icloud.com">Email me</a> and we'll talk it out. Enjoy this app with some friends while relaxing on your sofa... you're the king now.</p>
-                <img class="u-max-full-width" src="doublecouch.jpg"/>
-                <p>Photo used with permission from <a href="http://jaysbrickblog.com">Jay's Brick Blog</a></p>
-            </div>
-			<div id="disqus_thread"></div>
+---
+layout: base
+title: Welcome to Sofa King!
+---
+<div class="container">{% include nav_header_row.html %}</div>
+<div class="container">
+    <div class="row" style="margin-top: 10%">
+        <div class="one-half column category" style="text-align:center">
+			<h2>Sofa King: Sync</h2>
+            <img class="u-max-full-width" src="sofaking_bw.png"/>
+			<a class="button button-primary" href="https://itunes.apple.com/us/app/sofa-king-sync/id1129432984?mt=8">Get Sofa King: Sync</a>
         </div>
-        
-        <!-- End Document
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<script type="text/javascript">
-		    /* * * CONFIGURATION VARIABLES: THIS CODE IS ONLY AN EXAMPLE * * */
-		    var disqus_shortname = 'pokstad'; // Required - Replace example with your forum shortname
-		    /* * * DON'T EDIT BELOW THIS LINE * * */
-		    (function() {
-		        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		    })();
-		</script>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-43568935-1', 'auto');
-		  ga('send', 'pageview');
-		</script>
-    </body>
-</html>
- 
+        <p><strong>Sofa King: Sync</strong> is a mobile database replication app that allows you to sync datasets from your server to your pocket.</p>
+        <h5>Features &amp; Specs</h5>
+        <ul>
+            <li>Compatible with <a href="https://couchdb.apache.org">Apache CouchDB</a> and <a href="https://cloudant.com">IBM Cloudant</a> databases.</li>
+            <li>Innovative <a href="http://json.org">JSON</a> document interface. Drill down into each successive layer of a JSON tree without getting lost in the forest.</li>
+            <li>Locally stores a list of your favorite CouchDB servers.</li>
+            <li>Server credentials are stored securely using iOS keychain.</li>
+            <li>SSL enforced. Connections to servers using credentials require HTTPS (but HTTP is okay for anonymous usage).</li>
+            <li>Side effect free design. All network requests require explicit user action to ensure you only speak to your server when you desire.</li>
+            <li>No ads; Distraction free usage.</li>
+            <li>Absolutely no warranty. Use it like you stole it.</li>
+        </ul>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<h5>Roadmap</h5>
+		<p>Here are some of the features I would love to explore adding in the future:</p>
+		<ul>
+			<li>
+				Rapid editing of JSON docs
+			</li>
+			<li>
+				Backup server info and databases with iCloud account
+			</li>
+			<li>
+				TouchID protection
+			</li>
+			<li>
+				Store favorite JSON docs in central location
+			</li>
+			<li>
+				Map Reduce views powered locally by Javascript Core and GCD
+			</li>
+			<li>
+				Schema support
+			</li>
+			<li>
+				Javascript triggers
+			</li>
+			<li>
+				Background replication
+			</li>
+			<li>
+				Database sharing
+			</li>
+		</ul>
+	</div>
+	<div class="row">
+		<h5>FAQ</h5>
+		<ul>
+			<li>
+				<p><Strong>Who is this app intended for?</Strong></p>
+				<p>Anyone who relies on CouchDB to store important information and wishes to carry that dataset with them.</p>
+			</li>
+			<li>
+				<strong><p>Why can't I sync databases that start with an underscore?</p></strong>
+				<p>This is a limitation of CDTDatastore (Cloudant Sync) which is how the app replicates from the server. I am looking into it.</p>
+			</li>
+			<li>
+				<strong><p>What kind of datasets can I download?</p></strong>
+				<p>The app may hang when downloading datasets of several thousand documents. This is a high priority issue that I am focusing on. In the future we may use a more efficient replication method or use background processing.</p>
+			</li>
+			<li>
+				<strong><p>Will you open source the code?</p></strong>
+				<p>The app itself will remain closed source, but a critical library I am developing may become open sourced if I am able to package it properly.</p>
+			</li>
+			<li>
+				<p><strong>Where can I file a bug report?</strong></p>
+				<p>You can file a bug report here at the <a href="https://bitbucket.org/pokstad/couchgod/issues?status=new&status=open">bitbucket repo.</a></p>
+			</li>
+			<li>
+				<p><strong>I have a dataset I think would be a great fit in your playground. How can I go about adding it?</strong></p>
+				<p><a href="mailto:pokstad@icloud.com">Email me!</a></p>
+			</li>
+		</ul>
+	</div>
+	<div class="row">
+        <h5>Your Humble Dev</h5>
+        <p>Hi, I'm <a href="http://pokstad.com/author.html">Paul</a> and I made this for you because I think you're awesome. This software is free to use, so don't expect the world. Like it? Hate it? Feature request? Have some feedback? <a href="mailto:pokstad@icloud.com">Email me</a> and we'll talk it out. Enjoy this app with some friends while relaxing on your sofa... you're the king now.</p>
+        <img class="u-max-full-width" src="doublecouch.jpg"/>
+        <p>Photo used with permission from <a href="http://jaysbrickblog.com">Jay's Brick Blog</a></p>
+    </div>
+	<div id="disqus_thread"></div>
+</div>
