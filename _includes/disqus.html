@@ -1,0 +1,13 @@
+<div style="text-align:center;">
+	<button class="button-primary" onclick="expandComments(this)">Show Comments</button>
+	<script>
+	function expandComments(button) {
+		var link = document.getElementById('disqusRow');
+		link.style.display = 'block';
+		button.style.display = 'none';
+	}
+	</script>
+</div>
+<div id="disqusRow" class="row" style="display:none;">
+	<div id="disqus_thread"></div>
+</div>

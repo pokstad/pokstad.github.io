@@ -2,7 +2,9 @@
 layout: tophero
 ---
 <div class="row">
-	<h1>{{ page.title }}</h1>
-	{{content}}
-	<div id="disqus_thread"></div>
+	<h2>{{ page.title }}</h2>
+	<p>{{ page.date | date: "%B %-d, %Y" }}</p>
 </div>
+<div class="row">{{content}}</div>
+{% include disqus.html %}
+{% include footer.html %}

@@ -79,4 +79,4 @@ Another solution is to set the default credential for a protection space. Howeve
 
 A more ideal solution is to use the [NSURLSession delegate to handle authentication challenges](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/URLLoadingSystem/Articles/UsingNSURLSession.html#//apple_ref/doc/uid/TP40013509-SW16). This way, based on your app's specific logic you can choose which credential to retrieve from the credential store and use that instead. Currently, I cannot find anywhere in the library that exposes the NSURLSession delegate property for this customization.
 
-I opened an issue in regards to this problem: https://github.com/cloudant/CDTDatastore/issues/302
+[I opened an issue in regards to this problem](https://github.com/cloudant/CDTDatastore/issues/302)
