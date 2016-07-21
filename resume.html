@@ -12,6 +12,21 @@ layout: base
 	</div>
 	<h2>Philosophy</h2>
 	<p>My ultimate career goal is to always make my last role obsolete through a combination of engineering and mentoring. I believe that being transparent and sharing knowledge creates the best collaboration environment with my peers. Software engineering is extremely rewarding when you constantly push yourself to conquer problems so that you can focus on the next one. Being a good engineer means that you must always be willing to get out of your comfort zone to learn a new skill or approach a problem differently. Software is enabling the human race to become exponentially efficient in everything that we do and I am excited to be a part of that.</p>
+	<h2>Skill Highlights</h2>
+	<div class="row">
+		<div class="four columns">
+			<h5>Mobile</h5>
+			<ul><li>iOS</li><li>Swift</li><li>Objective-C</li><li>Core-Data</li><li>SQLite</li><li>Web services</li></ul>
+		</div>
+		<div class="four columns">
+			<h5>Back-end</h5>
+			<ul><li>Python</li><li>Golang</li><li>CouchDB (noSQL)</li><li>AWS</li><li>Google App Engine</li><li>Ubuntu Linux</li></p>
+		</div>
+		<div class="four columns">
+			<h5>Front-end</h5>
+			<ul><li>Javascript</li><li>React.js</li><li>Bootstrap v3</li><li>JQuery</li><li>AJAX</li><li>HTML & CSS</li></ul>
+		</div>
+	</div>
 	<h2>Experience</h2>
 	<hr/>
 	<div class="row">
@@ -24,7 +39,7 @@ layout: base
 			<p>My friend and I founded HCF to design an innovative fitness app that did more with less. It has been a rewarding journey. Being a two man shop, we wear many hats and have learned many lessons throughout the life of the product.</p>
 			<p><strong>Achievements</strong></p>
 			<ul>
-				<li>Co-developed the best selling app, Bodyweight Training: You Are Your Own Gym, that revolutionized bodyweight and functional fitness</li>
+				<li>Co-developed the best selling app, <a href="https://itunes.apple.com/us/app/bodyweight-training-you-are/id416981420?mt=8">Bodyweight Training: You Are Your Own Gym</a>, that revolutionized bodyweight and functional fitness</li>
 				<li>Maintained strong customer relations on our paid app that has earned us a strong 5 star rating with over 3200 reviews</li>
 				<li>Iterative improvements to UX/UI driven directly by customer feedback</li>
 				<li>Devised localization strategy to translate our app for major growth regions</li>
@@ -38,10 +53,10 @@ layout: base
 				<li>
 					iOS Development
 					<ul>
-						<li>Core Data & Sqlite backend</li>
-						<li>CouchDB (NoSQL) Sync System</li>
-						<li>JSON and Plist data import/export</li>
-						<li>Web services</li>
+						<li>Core Data & Sqlite backend in Objective-C</li>
+						<li>CouchDB (NoSQL) Sync System in Objective-C</li>
+						<li>JSON and Plist data import/export in Python and Objective-C</li>
+						<li>Web services in Objective-C</li>
 					</ul>
 				</li>
 				<li>
@@ -110,16 +125,17 @@ layout: base
 		<hr/>
 		<div class="row">
 			<div class="four columns">
-				<h5>Sofa King: Sync</h5>
+				<h5><a href="http://pokstad.com/sofaking/">Sofa King: Sync</a></h5>
 				<p><strong>July 2016</strong></p>
 			</div>
 			<div class="eight columns">
-				<p>I developed Sofa King: Sync as an experimental iOS app for demonstating various Apple technologies.</p>
+				<p>I developed <a href="https://itunes.apple.com/us/app/sofa-king-sync/id1129432984?mt=8">Sofa King: Sync</a> as an experimental iOS app for demonstating various Apple technologies.</p>
 				<p><strong>Features</strong></p>
 				<ul>
-					<li>Written almost entirely in Swift in the latest Xcode release.</li>
-					<li>Utilizes Cloudant Sync (CDTDatastore) to replicate data from remote servers and store locally on device</li>
-					<li>Uses innovative JSON explorer interface for diving into each layer of the object model</li>
+					<li>Written almost entirely in Swift 2.2 in Xcode 7.3</li>
+					<li>Utilizes Objective-C framework Cloudant Sync (CDTDatastore) bridged to Swift</li>
+                    <li>Replicates JSON documents from remote server databases and stores them locally on iOS device</li>
+					<li>Uses innovative JSON table view explorer interface for diving into each layer of the object model</li>
 					<li>Embraces best practices for protecting user data and credentials, such as data encryption, mandatory SSL, and iOS keychain</li>
 					<li>Exposes CouchDB HTTP API in an intuitive fashion</li>
 				</ul>
@@ -152,5 +168,5 @@ layout: base
 			</div>
 		</div>
 	</div>
-	
 </div>
+{% include footer.html %}
