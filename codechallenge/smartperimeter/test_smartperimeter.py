@@ -7,6 +7,10 @@ from random import choice
 from string import ascii_uppercase
 
 """
+Copyright Paul Okstad 2016
+pokstad@icloud.com
+http://pokstad.com/codechallenge/smartperimeter/challenge_response.html
+
 Tests based on requirements:
 
 1. String input of up to 250 characters

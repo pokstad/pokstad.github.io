@@ -3,6 +3,7 @@
 """
 Copyright Paul Okstad 2016
 pokstad@icloud.com
+http://pokstad.com/codechallenge/smartperimeter/challenge_response.html
 
 This script utilizes the home brew Python version 2.7
 along with pyOpenSSL v0.16 on macOS 10.11.5 (El Capitan).
@@ -52,7 +53,7 @@ def setup_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         'inputMessage',
-        help="The string you wish to generate a public/private key from.")
+        help="The string you wish to sign with your private key.")
     return parser
 
 # MessageSigner is the core of the script. It maintains the state of the message signing.
