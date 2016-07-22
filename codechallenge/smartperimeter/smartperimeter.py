@@ -26,7 +26,6 @@ running the test_smartperimeter.py file.
 
 import json
 import argparse
-import OpenSSL
 from OpenSSL import crypto
 import shelve
 import base64
