@@ -5,7 +5,7 @@ layout: base
 	{% include nav_header_row.html %}
 	<div class="row" style="text-align:center">
 		<h1>Paul Okstad</h1>
-		<p><strong>Software Engineer • Full Stack Developer • Mobile Developer</strong></p>
+		<p><strong>Software Engineer • Golang Developer</strong></p>
 		<p>Email: <a href="mailto:pokstad@icloud.com">pokstad@icloud.com</a></p>
 		<p>Long Beach, CA</p>
 		<a class="button button-primary" href="/downloads/resume_2016_public.pdf">Download 1-Page PDF Resume</a>
@@ -15,19 +15,96 @@ layout: base
 	<h2>Skill Highlights</h2>
 	<div class="row">
 		<div class="four columns">
-			<h5>Mobile</h5>
-			<ul><li>iOS</li><li>Swift</li><li>Objective-C</li><li>Core-Data</li><li>SQLite</li><li>Web services</li></ul>
+			<h5>Programming Languages</h5>
+			<ul>
+				<li>Golang</li>
+				<li>Python</li>
+				<li>Swift</li>
+				<li>Objective-C</li>
+				<li>Javascript</li>
+			</ul>
 		</div>
 		<div class="four columns">
-			<h5>Back-end</h5>
-			<ul><li>Python</li><li>Golang</li><li>CouchDB (noSQL)</li><li>AWS</li><li>Google App Engine</li><li>Ubuntu Linux</li></p>
+			<h5>Microservices</h5>
+			<ul>
+				<li>Protobuf</li>
+				<li>gRPC</li>
+				<li>Docker</li>
+				<li>x509</li>
+			</ul>
 		</div>
 		<div class="four columns">
-			<h5>Front-end</h5>
-			<ul><li>Javascript</li><li>React.js</li><li>Bootstrap v3</li><li>JQuery</li><li>AJAX</li><li>HTML & CSS</li></ul>
+			<h5>Software Used</h5>
+			<ul>
+				<li>Git</li>
+				<li>Gitlab CI</li>
+				<li>CouchDB (noSQL)</li>
+				<li>RHEL/CentOS Linux</li>
+				<li>MacOS</li>
+			</ul>
 		</div>
 	</div>
 	<h2>Experience</h2>
+	<hr/>
+	<div class="row">
+		<div class="four columns">
+			<h5>(Stealth Startup)</h5>
+			<p>Platform Developer</p>
+			<p><strong>August 2016-present</strong></p>
+		</div>
+		<div class="eight columns">
+			<p>I have been working for a stealth startup in the very new field of Mobile Edge Computing (MEC). My responsibilities include being a project lead on our appliance agent software as well as maintaining scalable microservices. My personal goals have been to design highly readable and testable code to improve onboarding and reliability.</p>
+			<p><strong>Achievements</strong></p>
+			<ul>
+				<li>Advised and coordinated transition to Golang to embrace concurrency, static typing, and tooling benefits</li>
+				<li>Devised strategies for managing monolithic Go repository to increase developer productivity</li>
+				<li>Devised strategy for decoupled command messages and action handlers in microservice environment</li>
+				<li>Developed libraries for interfacing with various Linux-based service configurations and commands</li>
+				<li>Devised fault tolerant strategy for management of mutable state of server resources</li>
+				<li>Closely coached and mentored new project contributors while addressing feedback and suggestions</li>
+			</ul>
+			<p><strong>Skills Exercised</strong></p>
+			<ul>
+				<li>Golang
+					<ul>
+						<li>Writing idiomatic and resillient Go code</li>
+						<li>Utilizing contexts for cancellation</li>
+						<li>Avoid Goroutine leaks by utilizing wait groups and error groups</li>
+						<li>Minimizing breaking API's through use of self referential options</li>
+						<li>Embracing interfaces to define contracts/requirements between components</li>
+						<li>Documenting code extensively for use with godoc</li>
+						<li>Writing expressive unit tests that run on every save</li>
+						<li>Utilizing static code analysis to lint code before every PR</li>
+						<li>Developed continuous integration strategy utilizing Gitlab CI</li>
+					</ul>
+				</li>
+				<li>gRPC and Protobuf
+					<ul>
+						<li>Code generation via gRPC/Protobuf service definitions</li>
+						<li>Writing client libraries abstract transport and message details</li>
+						<li>Standing up gRPC services during integration tests to validate both server and client</li>
+					</ul>
+				</li>
+				<li>Systems
+					<ul>
+						<li>Docker</li>
+						<li>Linux network management</li>
+						<li>IPSec and IKEv2</li>
+						<li>SystemD</li>
+						<li>x509-based PKI</li>
+						<li>BIND DNS</li>
+					</ul>
+				</li>
+				<li>Continuous Integration
+					<ul>
+						<li>Gitlab CI</li>
+						<li>Compiling, testing, and linting Go code</li>
+						<li>Building and capturing RPM and Docker artifacts</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
 	<hr/>
 	<div class="row">
 		<div class="four columns">
