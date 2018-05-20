@@ -1,10 +1,9 @@
 ---
-layout: tophero
+layout: base
 ---
 <div class="row">
 	<h2>{{ page.title }}</h2>
 	<p>{{ page.date | date: "%B %-d, %Y" }}</p>
 </div>
 <div class="row">{{content}}</div>
-{% include disqus.html %}
 {% include footer.html %}
