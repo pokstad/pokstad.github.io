@@ -4,3 +4,6 @@ name: pokstad is Paul Okstad
 description: Paul Okstad's blog about code, life, and general health
 
 url: http://pokstad.com
+
+plugins:
+  - jekyll-feed
