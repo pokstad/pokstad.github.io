@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PokiDB: CouchDB Reimagined
+title: PokiDB CouchDB Reimagined
 tags: [software, couchdb, databases, golang]
 --- 
 
@@ -121,7 +121,15 @@ The database improves upon CouchDB in the following ways:
 
 How should this interface look to a Go dev embedding this into a program? Some initial thoughts:
 
-Everything should be pluggable via interface. Out of the box, Poki will provide persistence via BoltDB in the local filesystem, but it is entirely up to the user to replace that with an abstraction to another type of datastore.
+Everything should be pluggable via interface. Out of the box, Poki will provide persistence via BoltDB in the local filesystem, but it is entirely up to the user to replace that with an abstraction to another type of datastore (e.g. RAM or SQL backed).
+
+```go
+type Datastore interface {
+	StoreDocRev(poki.Doc) (string, error)
+	StoreViewMap(name, key string, val []byte) (string, error)
+	StoreViewReduce(name, key, reduce []byte) (string, error)
+}
+```
 
 ```go
 srvr := poki.NewServer(boltdb.Store("/database"), poki.OpenAuth())
@@ -257,10 +265,10 @@ Porting the concept of Couch Apps to Poki while maintaining type safety is not e
 
 #### Views
 
-Views are essentially the same as CouchDB:
+Views are essentially the same as CouchDB. They are created and accessed via database methods:
 
 ```go
-package app
+package poki
 
 // Mappers maps a document to key/value pairs
 type Mapper interface {
@@ -272,12 +280,6 @@ type Mapper interface {
 type Reducer interface {
 	Reduce(key string, vals interface{}, rereduce bool) interface{}
 }
-```
-
-Views are created and accessed via database methods:
-
-```go
-package poki
 
 type View interface {
 	Mappings(startKey, endKey string) map[string][]interface{}
@@ -316,4 +318,6 @@ type Validator interface {
 
 ## What's next?
 
-Write an initial implementation and iterate. One of the biggest issues I see with the proposed draft is the lack of type safety. The excessive use of interfaces due to lack of generics is troublesome. Experimenting is needed to find out how to expose the Poki App API while maintaining strong type safety.
+Write an initial implementation and iterate. One of the biggest issues I see with the proposed draft is the lack of type safety. The excessive use of interfaces due to lack of generics is troublesome. Experimenting is needed to find out how to expose the Poki App API while maintaining strong type safety. Some additional gaps I want to cover:
+
+- Transform functions (CouchDB's show and list) with caching of transforms
