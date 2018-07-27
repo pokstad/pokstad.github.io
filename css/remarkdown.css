@@ -414,7 +414,6 @@ hr {
 }
 
 body {
-  max-width: 660px;
   padding: 30px;
   margin: 0 auto;
   color: #202020;
@@ -445,7 +444,7 @@ a:focus, a:active {
 
 nav {
   margin: 0 0 4em;
-  text-align: right;
+  text-align: center;
 }
 nav > br {
   display: none;
