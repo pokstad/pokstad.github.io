@@ -1,0 +1,11 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta name="author" content="Paul Okstad">
+    <title>{{ .Title }}</title>
+    <link href="/css/remarkdown.css" rel="stylesheet">
+    {{ range .AlternativeOutputFormats -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | absURL }}">
+    {{ end -}}
+</head>

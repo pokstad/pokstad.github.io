@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+<div>
+	<h2 class="h2-underline"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+	<p>{{ .Date.Format "January 2, 2006" }}</p>
+	<p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}</p>
+	<p>{{ range .Params.tags }}{{ . }} {{ end }}</p>
+</div>
+{{ end }}
+{{ partial "footer.html" . }}
+{{ end }}

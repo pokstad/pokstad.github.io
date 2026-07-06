@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+	{{ partial "head.html" . }}
+	<body class="remarkdown">
+		{{ partial "nav.html" . }}
+		<main class="remarkdown h1-underline h2-underline">
+			{{ block "main" . }}{{ end }}
+		</main>
+	</body>
+</html>

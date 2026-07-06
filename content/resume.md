@@ -1,0 +1,249 @@
+---
+title: Resume
+---
+<div class="container">
+	<div class="row" style="text-align:center">
+		<hr/>
+		<p>Paul Okstad</p>
+		<p><strong>Software Engineer • Golang Developer</strong></p>
+		<p>Email: <a href="mailto:pokstad@icloud.com">pokstad@icloud.com</a></p>
+    <p><a href="https://www.linkedin.com/in/paul-okstad-48144ab/">LinkedIn Profile</a></p>
+		<p>Long Beach, CA</p>
+		<a class="button button-primary" href="/downloads/resume_2016_public.pdf">Download 1-Page PDF Resume</a>
+	</div>
+	<h2>Philosophy</h2>
+	<p>My ultimate career goal is to always make my last role obsolete through a combination of engineering and mentoring. I believe that being transparent and sharing knowledge creates the best collaboration environment with my peers. Software engineering is extremely rewarding when you constantly push yourself to conquer problems so that you can focus on the next one. Being a good engineer means that you must always be willing to get out of your comfort zone to learn a new skill or approach a problem differently. Software is enabling the human race to become exponentially efficient in everything that we do and I am excited to be a part of that.</p>
+	<h2>Skill Highlights</h2>
+	<div class="row">
+		<div class="four columns">
+			<h5>Programming Languages</h5>
+			<ul>
+				<li>Golang</li>
+				<li>Python</li>
+				<li>Swift</li>
+				<li>Objective-C</li>
+				<li>Javascript</li>
+			</ul>
+		</div>
+		<div class="four columns">
+			<h5>Microservices</h5>
+			<ul>
+				<li>Protobuf</li>
+				<li>gRPC</li>
+				<li>Docker</li>
+				<li>x509</li>
+			</ul>
+		</div>
+		<div class="four columns">
+			<h5>Software Used</h5>
+			<ul>
+				<li>Git</li>
+				<li>Gitlab CI</li>
+				<li>CouchDB (noSQL)</li>
+				<li>RHEL/CentOS Linux</li>
+				<li>MacOS</li>
+			</ul>
+		</div>
+	</div>
+	<h2>Experience</h2>
+	<hr/>
+	<div class="row">
+		<div class="four columns">
+			<h5>(Stealth Startup)</h5>
+			<p>Platform Developer</p>
+			<p><strong>August 2016-present</strong></p>
+		</div>
+		<div class="eight columns">
+			<p>I have been working for a stealth startup in the very new field of Mobile Edge Computing (MEC). My responsibilities include being a project lead on our appliance agent software as well as maintaining scalable microservices. My personal goals have been to design highly readable and testable code to improve onboarding and reliability.</p>
+			<p><strong>Achievements</strong></p>
+			<ul>
+				<li>Advised and coordinated transition to Golang to embrace concurrency, static typing, and tooling benefits</li>
+				<li>Devised strategies for managing monolithic Go repository to increase developer productivity</li>
+				<li>Devised strategy for decoupled command messages and action handlers in microservice environment</li>
+				<li>Developed libraries for interfacing with various Linux-based service configurations and commands</li>
+				<li>Devised fault tolerant strategy for management of mutable state of server resources</li>
+				<li>Closely coached and mentored new project contributors while addressing feedback and suggestions</li>
+			</ul>
+			<p><strong>Skills Exercised</strong></p>
+			<ul>
+				<li>Golang
+					<ul>
+						<li>Writing idiomatic and resillient Go code</li>
+						<li>Utilizing contexts for cancellation</li>
+						<li>Avoid Goroutine leaks by utilizing wait groups and error groups</li>
+						<li>Minimizing breaking API's through use of self referential options</li>
+						<li>Embracing interfaces to define contracts/requirements between components</li>
+						<li>Documenting code extensively for use with godoc</li>
+						<li>Writing expressive unit tests that run on every save</li>
+						<li>Utilizing static code analysis to lint code before every PR</li>
+						<li>Developed continuous integration strategy utilizing Gitlab CI</li>
+					</ul>
+				</li>
+				<li>gRPC and Protobuf
+					<ul>
+						<li>Code generation via gRPC/Protobuf service definitions</li>
+						<li>Writing client libraries abstract transport and message details</li>
+						<li>Standing up gRPC services during integration tests to validate both server and client</li>
+					</ul>
+				</li>
+				<li>Systems
+					<ul>
+						<li>Docker</li>
+						<li>Linux network management</li>
+						<li>IPSec and IKEv2</li>
+						<li>SystemD</li>
+						<li>x509-based PKI</li>
+						<li>BIND DNS</li>
+					</ul>
+				</li>
+				<li>Continuous Integration
+					<ul>
+						<li>Gitlab CI</li>
+						<li>Compiling, testing, and linting Go code</li>
+						<li>Building and capturing RPM and Docker artifacts</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<hr/>
+	<div class="row">
+		<div class="four columns">
+			<h5>Hard Coded Fitness, LLC</h5>
+			<p>Partner & Co-Developer</p>
+			<p><strong>2010-present</strong></p>
+		</div>
+		<div class="eight columns">
+			<p>My friend and I founded HCF to design an innovative fitness app that did more with less. It has been a rewarding journey. Being a two man shop, we wear many hats and have learned many lessons throughout the life of the product.</p>
+			<p><strong>Achievements</strong></p>
+			<ul>
+				<li>Co-developed the best selling app, <a href="https://itunes.apple.com/us/app/bodyweight-training-you-are/id416981420?mt=8">Bodyweight Training: You Are Your Own Gym</a>, that revolutionized bodyweight and functional fitness</li>
+				<li>Maintained strong customer relations on our paid app that has earned us a strong 5 star rating with over 3200 reviews</li>
+				<li>Iterative improvements to UX/UI driven directly by customer feedback</li>
+				<li>Devised localization strategy to translate our app for major growth regions</li>
+				<li>Designed and deployed Customer Account & Sync Service</li>
+				<li>Developed user facing web app using Google App Engine with Golang</li>
+				<li>Automated mobile database import using Objective-C, Python scripts and Google Docs</li>
+				<li>Shared general business responsibilities</li>
+			</ul>
+			<p><strong>Skills Exercised</strong></p>
+			<ul>
+				<li>
+					iOS Development
+					<ul>
+						<li>Core Data & Sqlite backend in Objective-C</li>
+						<li>CouchDB (NoSQL) Sync System in Objective-C</li>
+						<li>JSON and Plist data import/export in Python and Objective-C</li>
+						<li>Web services in Objective-C</li>
+					</ul>
+				</li>
+				<li>
+					Server & Devops
+					<ul>
+						<li>Built custom CouchDB system on Ubuntu</li>
+						<li>Developed custom Python task queue based on CouchDB</li>
+						<li>Developed Golang based web services on AWS and Google App Engine</li>
+						<li>Deployed to AWS with custom Python build system</li>
+						<li>Developed data backup system using Rsync and CouchDB</li>
+					</ul>
+				</li>
+				<li>
+					Front end web development
+					<ul>
+						<li>Developed custom Bootstrap components using React.js </li>
+						<li>Javascript AJAX used for communicating to CouchDB server and Google services</li>
+						<li>Experimented using client-side Javascript templates (Hogan.js) for rendering HTML content</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<hr/>
+	<div class="row">
+		<div class="four columns">
+			<h5>The Boeing Company</h5>
+			<p>Systems Engineer</p>
+			<p><strong>2006-2014</strong></p>
+		</div>
+		<div class="eight columns">
+			<p>Being on multiple defense programs, I worked on highly critical systems that required a respect for safety and security. I not only needed to work responsibly, but I also needed to be flexible and react quickly to new issues as they arose.</p>
+			<p><strong>Achievements</strong></p>
+			<ul>
+				<li>Improved network test efficiency for high reliability communications network.</li>
+				<li>Developed C# .Net Windows application for interfacing with legacy satellite comm gear.</li>
+				<li>Devised solution for automating performance monitoring of legacy serial communication links to help government decision making.</li>
+				<li>Developed screen scraping applications for monitoring status and configuration control of critical communications gear</li>
+				<li>Simulated expensive control unit in Python to assist in trouble shooting effort in testbed.</li>
+			</ul>
+			<p><strong>Skills Exercised</strong></p>
+			<ul>
+				<li>Telecommunications
+					<ul>
+						<li>Tcl Expect for screen scraping telnet/ssh sessions.</li>
+						<li>Data analysis and text processing using Perl and Python scripts.</li>
+						<li>Wrote XML and Excel data report generation for various activities</li>
+					</ul>
+				</li>
+				<li>Information Assurance
+					<ul>
+						<li>Remediated servers using DISA STIG guidelines</li>
+						<li>Automated IA remediation on ESXi and Solaris systems using Bash and Python scripting</li>
+					</ul>
+				</li>
+				<li>Virtualization & Devops
+					<ul>
+						<li>Developed procedures and manuals for deploying ESXi based servers</li>
+						<li>Extensive use of VirtualBox to streamline server development activities</li>
+						<li>Automated RHEL/Oracle software stack installation using Python and kickstart scripts</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<h2>Projects</h2>
+		<hr/>
+		<div class="row">
+			<div class="four columns">
+				<h5><a href="http://pokstad.com/sofaking/">Sofa King: Sync</a></h5>
+				<p><strong>July 2016</strong></p>
+			</div>
+			<div class="eight columns">
+				<p>I developed <a href="https://itunes.apple.com/us/app/sofa-king-sync/id1129432984?mt=8">Sofa King: Sync</a> as an experimental iOS app for demonstating various Apple technologies.</p>
+				<p><strong>Features</strong></p>
+				<ul>
+					<li>Written almost entirely in Swift 2.2 in Xcode 7.3</li>
+					<li>Utilizes Objective-C framework Cloudant Sync (CDTDatastore) bridged to Swift</li>
+                    <li>Replicates JSON documents from remote server databases and stores them locally on iOS device</li>
+					<li>Uses innovative JSON table view explorer interface for diving into each layer of the object model</li>
+					<li>Embraces best practices for protecting user data and credentials, such as data encryption, mandatory SSL, and iOS keychain</li>
+					<li>Exposes CouchDB HTTP API in an intuitive fashion</li>
+				</ul>
+			</div>
+		</div>
+		<h2>Education</h2>
+		<hr/>
+		<div class="row">
+			<div class="four columns">
+				<h5>California State University Long Beach</h5>
+				<p><strong>Computer Science B.S. 2009</strong></p>
+			</div>
+			<div class="eight columns">
+				<p><strong>Semester Courses Taken</strong></p>
+				<ul>
+					<li>Programming and Problem Solving with C++ (I,II,III)</li>
+					<li>Computer Logic Design (I,II)</li>
+					<li>Discrete Structures with Computer Science Applications (I,II)</li>
+					<li>Computing with Java</li>
+					<li>Database Fundamentals</li>
+					<li>Computer Organization and Assembly Language Programming</li>
+					<li>Operating Systems</li>
+					<li>Net-Centric Computing</li>
+					<li>Software Engineering</li>
+					<li>Computer Architecture</li>
+					<li>Compiler Construction</li>
+					<li>Computer Network Interoperability</li>
+					<li>Object-Oriented Programming with C#</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
