@@ -1,24 +1,21 @@
-# pokstad.github.io #
+# pokstad.github.io
 
-My Static Site hosting on Github
+My static site hosted on GitHub Pages, built with [Hugo](https://gohugo.io).
 
-## Install Jekyll for Github ##
+## Install Hugo
 
-To install Jekyll software for local testing:
+```
+brew install hugo
+```
 
-1. Run command: `gem install bundler`
-1. Go to root directory of repo and create file called `Gemfile`
-1. Add line `gem 'github-pages'` to top of Gemfile
-1. Run command `bundle install`
+## Local development
 
-## Running Jekyll ##
+```
+./run.sh
+```
 
-In the repo root folder, run command `bundle exec jekyll serve`
+Serves the site at `http://localhost:1313` with drafts included. Live-reloads on file changes.
 
-## Updating Jekyll ##
+## Deployment
 
-Every once in a while, update Jekyll with the command `bundle update` in the root directory.
-
-# SHORTCUT #
-
-Just run the script `sudo update_and_run_jekyll.sh` from the repo root directory. It will update the software and then run the test server on port 4000.
+Pushing to `master` triggers a GitHub Actions workflow that builds and deploys the site automatically.
